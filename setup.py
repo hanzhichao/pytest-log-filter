@@ -8,7 +8,7 @@ this_directory = os.path.abspath(os.path.dirname(__file__))
 
 setup_requirements = ['pytest-runner', ]
 
-version = '0.0.1'
+version = '0.0.2'
 
 def read_file(filename):
     with open(os.path.join(this_directory, filename), encoding='utf-8') as f:
@@ -45,7 +45,7 @@ setup(
     ],
     entry_points={
         'pytest11': [
-            'pytest-relative-path = pytest_relative_path.plugin',
+            'pytest-log-filter = pytest_log_filter.plugin',
         ]
     }
 )
