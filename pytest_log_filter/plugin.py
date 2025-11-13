@@ -11,7 +11,6 @@ def pytest_configure(config):
     if config.getini('log_ignore'):
         logger_names += config.getini('log_ignore').split('\n')
     logger_names = list(set([item.strip() for item in logger_names]))
-    print("ignore-loggers", logger_names)
 
     for logger_name in logger_names:
         logger = logging.getLogger(logger_name)
